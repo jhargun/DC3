@@ -22,6 +22,4 @@ def madlib(request, num):
     else:
         if num == 1:
             form = form1()
-            context = {'form': form,
-                       'page': reverse('DC3:madlib', args=(num))}
-            return render(request, 'madlibs/Form.html',)
+            return render(request, 'madlibs/Form.html', {'form': form})

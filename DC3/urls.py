@@ -18,6 +18,7 @@ from django.urls import path
 from madlibs import views
 
 urlpatterns = [
-    path('', views.index),
+    path('', views.home),
+    path('<int:num>', views.madlib),
     path('admin/', admin.site.urls),
 ]

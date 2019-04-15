@@ -18,7 +18,7 @@ from django.urls import path
 from madlibs import views
 
 urlpatterns = [
-    path('', views.home),
-    path('<int:num>', views.madlib),
+    path('', views.home., name='home'),
+    path('<int:num>', views.madlib, name='madlib'),
     path('admin/', admin.site.urls),
 ]

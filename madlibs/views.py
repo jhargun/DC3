@@ -20,6 +20,8 @@ def madlib(request, num):
                     context[vars[i]] = form.cleaned_data[vars[i]]
                 return HttpResponse(context)
                 #return render(request, 'madlibs/form1.html', context)
+            return HttpResponse('Error! Form not valid!')
+        return HttpResponse('Not a valid madlib number! Valid numbers: 1')
     else:
         if num == 1:
             form = form1()

@@ -23,4 +23,4 @@ def madlib(request, num):
     else:
         if num == 1:
             form = form1()
-            return render(request, 'madlibs/Form.html', {'form': form})
+    return render(request, 'madlibs/Form.html', {'form': form})

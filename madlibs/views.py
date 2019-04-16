@@ -25,4 +25,6 @@ def madlib(request, num):
     else:
         if num == 1:
             form = form1()
+        else:
+            return HttpResponse('Not a valid madlib number! Valid numbers: 1')
     return render(request, 'madlibs/Form.html', {'form': form})

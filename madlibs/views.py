@@ -9,7 +9,7 @@ def home(request):
 
 def madlib(request, num):
     #return render(request, 'madlibs/form1.html')
-    if request.method == 'Post':
+    if request.method == 'POST':
         if num == 1:
             form = form1(request.POST)
             if form.is_valid():

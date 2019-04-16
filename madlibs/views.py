@@ -13,10 +13,10 @@ def madlib(request, num):
         if num == 1:
             form = form1(request.POST)
             if form.is_valid():
-                #Made for loop to clean data and add to context
-                context = {}
+                #Made a for loop to clean data and add to context
                 vars = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
-                for i in range(len(vars)):
+                context = {'j': form.cleaned_data['j']}
+                for i in range(len(vars) - 1):
                     context[vars[i]] = form.cleaned_data[vars[i]]
                 return HttpResponse(type(context))
                 #return render(request, 'madlibs/form1.html', context)

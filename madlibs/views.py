@@ -18,8 +18,8 @@ def madlib(request, num):
                 context = {'j': form.cleaned_data['j']}
                 for i in range(len(vars) - 1):
                     context[vars[i]] = form.cleaned_data[vars[i]]
-                return HttpResponse(type(context))
-                #return render(request, 'madlibs/form1.html', context)
+                #return HttpResponse(context)
+                return render(request, 'madlibs/form1.html', context)
     else:
         if num == 1:
             form = form1()
